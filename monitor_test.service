@@ -1,15 +1,9 @@
 # /etc/systemd/system/monitor_test.service
 
 [Unit]
-Description=Monitor process btop
-After=network.target
+Description=monitoring test process
 
 [Service]
-Type=simple
-ExecStart=/home/1Tb/test/monitoring_test.sh
-Restart=always
-RestartSec=5
-User=root
-
-[Install]
-WantedBy=multi-user.target
+Type=oneshot
+User=monitor
+ExecStart=/usr/local/bin/monitor_test.sh
