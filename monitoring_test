@@ -1,0 +1,10 @@
+#/etc/logrotate.d/monitoring_test
+
+/var/log/monitoring_test.log {
+    daily
+    rotate 7
+    compress
+    missingok
+    notifempty
+    create 0640 monitor monitor
+}

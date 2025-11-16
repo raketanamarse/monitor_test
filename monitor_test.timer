@@ -1,0 +1,12 @@
+#/etc/systemd/system/monitor_test.timer
+
+[Unit]
+Description=run monitor script every minute
+
+[Timer]
+OnBootSec=30sec
+OnUnitActiveSec=60sec
+Persistent=true
+
+[Install]
+WantedBy=timers.target
